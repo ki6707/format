@@ -6,216 +6,146 @@
 <title>Arangulalingam | Portfolio</title>
 
 <style>
-/* ========== RESET ========== */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
-
 body{
-  background:#0f172a;
-  color:#ffffff;
-  text-align:center;
+    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+    color:white;
 }
-
-/* ========== HERO ========== */
-.hero{
-  padding:50px 15px;
+header{
+    text-align:center;
+    padding:60px 20px;
+    animation:fadeIn 2s ease;
 }
-
-.profile-img{
-  width:140px;
-  max-width:40vw;
-  border-radius:50%;
-  border:3px solid #22c55e;
-  animation:float 3s infinite ease-in-out;
+header img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:4px solid #00e5ff;
+    animation:float 3s infinite ease-in-out;
 }
-
-h1{
-  margin-top:15px;
-  font-size:clamp(24px, 6vw, 34px);
-  animation:fadeIn 2s ease;
+header h1{
+    margin-top:20px;
+    font-size:2.2rem;
 }
-
-.hero p{
-  color:#94a3b8;
-  font-size:clamp(14px, 4vw, 18px);
-  animation:slideUp 2s ease;
+header p{
+    opacity:0.9;
 }
-
-/* ========== SECTIONS ========== */
 section{
-  padding:35px 15px;
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
 }
-
-h2{
-  margin-bottom:18px;
-  color:#38bdf8;
-  font-size:clamp(20px, 5vw, 26px);
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    transition:transform 0.3s;
 }
-
-/* ========== ABOUT ========== */
-.about p{
-  max-width:720px;
-  margin:auto;
-  line-height:1.7;
-  font-size:clamp(14px, 4vw, 16px);
+.card:hover{
+    transform:translateY(-6px);
 }
-
-/* ========== SKILLS ========== */
-.skill{
-  width:92%;
-  max-width:520px;
-  margin:14px auto;
-  text-align:left;
+.skills span{
+    display:inline-block;
+    background:#00e5ff;
+    color:black;
+    padding:8px 15px;
+    margin:6px;
+    border-radius:20px;
+    font-size:14px;
 }
-
-.skill span{
-  font-size:14px;
-}
-
-.bar{
-  height:10px;
-  background:#22c55e;
-  border-radius:10px;
-  animation:grow 2s ease;
-}
-
-.html{width:90%;}
-.css{width:85%;}
-.js{width:70%;}
-.python{width:65%;}
-.c{width:60%;}
-
-/* ========== PROJECTS ========== */
-.project{
-  background:#1e293b;
-  width:95%;
-  max-width:680px;
-  margin:20px auto;
-  padding:20px;
-  border-radius:14px;
-  transition:0.3s;
-}
-
-.project:hover{
-  transform:scale(1.04);
-}
-
-.project h3{
-  font-size:clamp(18px, 5vw, 22px);
-}
-
-.project p{
-  font-size:clamp(14px, 4vw, 16px);
-}
-
 .project a{
-  display:inline-block;
-  margin:10px;
-  padding:8px 16px;
-  border:1px solid #22c55e;
-  border-radius:20px;
-  color:#22c55e;
-  text-decoration:none;
-  font-size:14px;
+    color:#00e5ff;
+    text-decoration:none;
 }
-
-/* ========== CONTACT ========== */
-.email{
-  font-size:clamp(16px, 4vw, 18px);
-  color:#22c55e;
-}
-
-/* ========== FOOTER ========== */
 footer{
-  padding:20px;
-  font-size:13px;
-  color:#64748b;
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    opacity:0.8;
 }
-
-/* ========== ANIMATIONS ========== */
 @keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
+    from{opacity:0;}
+    to{opacity:1;}
 }
-
-@keyframes slideUp{
-  from{transform:translateY(30px);}
-  to{transform:translateY(0);}
-}
-
 @keyframes float{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-10px);}
-  100%{transform:translateY(0);}
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
 }
-
-@keyframes grow{
-  from{width:0;}
+@media(max-width:600px){
+    header h1{
+        font-size:1.6rem;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="profile.jpg" alt="Profile Image" class="profile-img">
-  <h1>Arangulalingam</h1>
-  <p>Frontend Developer | BCA Student</p>
-</div>
+<header>
+    <img src="your-photo.jpg" alt="My Photo">
+    <h1>Arangulalingam Murugesan</h1>
+    <p>BCA Student | Frontend Developer</p>
+</header>
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I am a passionate Frontend Developer with strong skills in 
-    HTML, CSS, JavaScript, Python, and C.
-    I build responsive, animated, and user-friendly websites.
-  </p>
-</section>
-
-<!-- SKILLS -->
 <section>
-  <h2>Skills</h2>
-  <div class="skill"><span>HTML</span><div class="bar html"></div></div>
-  <div class="skill"><span>CSS</span><div class="bar css"></div></div>
-  <div class="skill"><span>JavaScript</span><div class="bar js"></div></div>
-  <div class="skill"><span>Python</span><div class="bar python"></div></div>
-  <div class="skill"><span>C</span><div class="bar c"></div></div>
-</section>
+    <div class="card">
+        <h2>About Me</h2><br>
+        <p>
+            I am a BCA student with strong interest in web development.
+            I teach HTML, CSS, JavaScript, C, and Python.
+            I enjoy building responsive and modern websites.
+        </p>
+    </div>
 
-<!-- PROJECTS -->
-<section>
-  <h2>Projects</h2>
+    <div class="card">
+        <h2>Skills</h2><br>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>C</span>
+            <span>Python</span>
+            <span>Git & GitHub</span>
+        </div>
+    </div>
 
-  <div class="project">
-    <h3>Todo List App</h3>
-    <p>Task manager using HTML, CSS & JavaScript</p>
-    <a href="https://github.com/ki6707/TODO-LIST" target="_blank">GitHub</a>
-    <a href="https://your-live-link.com" target="_blank">Live Demo</a>
-  </div>
+    <div class="card">
+        <h2>Projects</h2><br>
+        <h3>TODO List App</h3>
+        <p>
+            <a href="https://github.com/ki6707/TODO-LIST" target="_blank">
+                GitHub Repository
+            </a>
+        </p><br>
 
-  <div class="project">
-    <h3>Calculator</h3>
-    <p>JavaScript based calculator</p>
-    <a href="https://github.com/ki6707/calculator" target="_blank">GitHub</a>
-    <a href="https://your-live-link.com" target="_blank">Live Demo</a>
-  </div>
-</section>
+        <h3>Calculator App</h3>
+        <p>
+            <a href="https://github.com/ki6707/calculator" target="_blank">
+                GitHub Repository
+            </a>
+        </p>
+    </div>
 
-<!-- CONTACT -->
-<section>
-  <h2>Contact</h2>
-  <p>Email</p>
-  <p class="email">arangulalingam.dev@gmail.com</p>
+    <div class="card">
+        <h2>Contact</h2><br>
+        <p>Email: <b>yourmail@gmail.com</b></p><br>
+        <p>
+            GitHub:
+            <a href="https://github.com/ki6707" target="_blank" style="color:#00e5ff;">
+                github.com/ki6707
+            </a>
+        </p>
+    </div>
 </section>
 
 <footer>
-  © 2026 Arangulalingam | Fully Responsive Portfolio
+    © 2026 | Designed by Arangulalingam
 </footer>
 
 </body>
